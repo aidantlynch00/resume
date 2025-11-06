@@ -16,17 +16,21 @@
 ]
 
 #align(center)[
-  #text(size: 20.74pt, upper("Aidan Lynch"))
+  #text(size: 20.74pt, upper[*Aidan Lynch*])
 ]
 
-#v(12pt)
+#v(-10pt)
 
 #align(center)[
-  #fa-icon("phone") (281) 665-9846 \
-  #fa-icon("envelope", solid: true) #link("mailto:aidantlynch00@gmail.com")[aidantlynch00\@gmail.com] \
-  #fa-icon("linkedin") #link("https://www.linkedin.com/in/aidan-lynch-935317194/")[Aidan Lynch] \
-  #fa-icon("github") #link("https://github.com/aidantlynch00")[aidantlynch00] \
-  #fa-icon("earth-americas") #link("aidantlynch.com")[aidantlynch.com]
+  #fa-icon("phone") (281) 665-9846
+  #h(5pt)
+  #fa-icon("envelope", solid: true) #link("mailto:aidantlynch00@gmail.com")[aidantlynch00\@gmail.com]
+  #h(5pt)
+  #fa-icon("linkedin") #link("https://www.linkedin.com/in/aidan-lynch-935317194/")[Aidan Lynch]
+  #h(5pt)
+  #fa-icon("github") #link("https://github.com/aidantlynch00")[aidantlynch00]
+  #h(5pt)
+  #fa-icon("earth-americas") #link("www.aidantlynch.com")[aidantlynch.com]
 ]
 
 #align(center)[#emph[*Seeking an engineering role.*]]
