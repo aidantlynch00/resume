@@ -6,7 +6,6 @@
   continue-header: "false",
   margin: (left: 1.25cm, right: 1.25cm, top: 1.2cm, bottom: 1.2cm),
   name: [John Doe],
-  address: [123 Street, City, Country],
   contacts: (
     (text: [#fa-icon("location-dot") UK]),
     (text: [#fa-icon("mobile") 123-456-789], link: "tel:123-456-789"),

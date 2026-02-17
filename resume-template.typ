@@ -238,7 +238,6 @@
   continue-header: "false",
   margin: none,
   name: none,
-  address: none,
   contacts: (),
   mainbody,
 ) = {
@@ -265,18 +264,6 @@
           bottom-edge: "baseline",
           baseline: 11pt,
         )[#align(center, [#name])]
-        // address
-        if address != none {
-          v(3pt)
-          text(
-            11pt,
-            fill: primary-colour,
-            weight: "regular",
-            top-edge: "baseline",
-            bottom-edge: "baseline",
-            baseline: 2pt,
-          )[#align(center, [#address])]
-        }
         v(2pt)
         align(center)[#contact-display(contacts)]
       },
@@ -292,20 +279,8 @@
       top-edge: "baseline",
       bottom-edge: "baseline",
       baseline: 11pt,
-    )[#align(center, [#name])]
-    // address
-    if address != none {
-      v(3pt)
-      text(
-        11pt,
-        fill: primary-colour,
-        weight: "regular",
-        top-edge: "baseline",
-        bottom-edge: "baseline",
-        baseline: 2pt,
-      )[#align(center, [#address])]
-    }
-    v(2pt)
+    )[#align(center, [#upper(name)])]
+    v(1pt)
     align(center)[#contact-display(contacts)]
     // line(length: 100%, stroke: 0.5pt + primary-colour)
     mainbody
