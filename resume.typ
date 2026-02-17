@@ -11,15 +11,23 @@
 
 #let rSection(title, content) = [
   #text(weight: "bold", size: 11pt, upper(title))
+  #v(-10pt)
   #line(length: 100%, stroke: 1pt)
+  #v(-8pt)
   #content
+]
+
+#let bulleted(bullets) = [
+  #for bullet in bullets [
+    - #bullet
+  ]
 ]
 
 #align(center)[
   #text(size: 20.74pt, upper[*Aidan Lynch*])
 ]
 
-#v(-10pt)
+#v(-15pt)
 
 #align(center)[
   #fa-icon("phone") (281) 665-9846
@@ -46,11 +54,13 @@
 
 #rSection("Experience")[
   *Company:* *Engineer* #h(1fr) *February 1954 - Present*
-  - Bullet point 1
-  - Bullet point 2
-  - Bullet point 3
-  - Bullet point 4
-  - *Utilized:* C++, Bash, PowerShell, Linux/WSL, OpenEmbedded, OpenWRT, Azure DevOps, SVN
+  #bulleted((
+    "Bullet point 1",
+    "Bullet point 2",
+    "Bullet point 3",
+    "Bullet point 4",
+    "Utilized: C++, Bash, PowerShell, Linux/WSL, OpenEmbedded, OpenWRT, Azure DevOps, SVN"
+))
 
   *Startup:* *Engineering Intern* #h(1fr) *May 1953 - August 1953*
   - Bullet point 1
