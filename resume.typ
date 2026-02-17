@@ -1,14 +1,12 @@
 #import "resume-template.typ": *
 #import "@preview/fontawesome:0.6.0": *
 
-#show: cv-single.with(
+#show: resume.with(
   font-type: "Calibri",
   continue-header: "false",
   margin: (left: 1.25cm, right: 1.25cm, top: 1.2cm, bottom: 1.2cm),
   name: [John Doe],
   address: [123 Street, City, Country],
-  lastupdated: "false",
-  pagecount: "false",
   contacts: (
     (text: [#fa-icon("location-dot") UK]),
     (text: [#fa-icon("mobile") 123-456-789], link: "tel:123-456-789"),
@@ -17,80 +15,41 @@
 )
 
 #let sections = (
-  section-block("about", title: "About")[
-    #descript[#lorem(50)]
-  ],
   section-block("education", title: "Education")[
     #education(
-      institution: [#lorem(4)],
-      major: [#lorem(2)],
-      date: "xxxx-xxxx",
-      location: "UK",
-      description: [
-        - #lorem(10),
-        - #lorem(10),
-        - #lorem(10),
-      ],
-    )
-    #subsectionsep
-    #education(
-      institution: [#lorem(4)],
-      major: [#lorem(2)],
-      date: "xxxx-xxxx",
-      location: "UK",
+      institution: "Rochester Institute of Technology",
+      major: "Bachelor of Science in Computer Science",
+      date: "2019 " + sym.dash.en + " 2022",
     )
   ],
   section-block("skills", title: "Skills")[
     #oneline-title-item(
       title: "Programming Languages",
-      content: [Python, C++, Java, JavaScript, HTML, CSS, SQL, LaTeX],
-    )
-  ],
-  section-block("awards", title: "Awards")[
-    #award(
-      award: "Scholarship",
-      date: "2018",
-      institution: "University",
+      content: ("Python", "C++", "Java", "JavaScript", "HTML", "CSS", "SQL", "LaTeX"),
     )
   ],
   section-block("experience", title: "Experience")[
     #job(
       position: "Software Engineer",
-      institution: [#lorem(4)],
-      location: "UK",
+      company: [#lorem(4)],
       date: "xxxx-xxxx",
-      description: [
-        - #lorem(10),
-        - #lorem(10),
-        - #lorem(10),
-      ],
+      bullets: (
+        lorem(10),
+        lorem(10),
+        lorem(10),
+      ),
     )
   ],
   section-block("projects", title: "Projects")[
-    #twoline-item(
-      entry1: "Project 1",
-      entry2: "Jan 2023",
-      description: [#lorem(40)],
+    #project(
+      title: "Project 1",
+      date: "Jan 2023",
+      bullets: (
+        lorem(10),
+        lorem(10),
+        lorem(10),
+      ),
     )
-  ],
-  section-block("references", title: "References", separator: false)[
-    #references(references: (
-      (
-        name: "Dr. John Doe",
-        position: "Professor",
-        department: "Computer Science",
-        institution: "University",
-        address: "123 Street, City, Country",
-        email: "john.doe@university.edu",
-      ),
-      (
-        name: "Dr. John Doe",
-        department: "Computer Science",
-        institution: "University",
-        address: "123 Street, City, Country",
-        email: "john.doe@university.edu",
-      ),
-    ))
   ],
 )
 
@@ -100,9 +59,6 @@
   "projects",
   "education",
   "skills",
-  "awards",
-  "publications",
-  "references",
 )
 
 #render-sections(sections: sections, order: section-order)

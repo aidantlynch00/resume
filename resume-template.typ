@@ -27,36 +27,43 @@
   text(11pt, fill: subheadings-colour, weight: "bold")[#content]
 }
 
+#let bulleted(bullets) = {
+  if bullets != none {
+    for bullet in bullets {
+      let bullet = [#sym.square.filled.tiny #bullet \ ]
+      text(11pt, fill: primary-colour, weight: "medium")[#bullet]
+    }
+  }
+}
+
 // Education part
-#let education(institution: none, major: none, date: none, location: none, description: none) = {
+#let education(institution: none, major: none, date: none, location: none, bullets: none) = {
   let institution_location = if (institution != none) and (location != none) {
-    // With comma separator
-    [#institution, #location]
+    // With bar separator
+    [#institution | #location]
   } else {
-    // Without comma separator
+    // Without separator
     [#institution #location]
   }
   text(11pt, fill: subheadings-colour, weight: "bold")[#institution_location]
   h(1fr)
   text(11pt, style: "italic", fill: headings-colour, weight: "regular")[#date \ ]
   text(11pt, style: "italic", fill: subheadings-colour, weight: "medium")[#major \ ]
-  if description != [] or description != none {
-    text(11pt, fill: primary-colour, weight: "regular")[#description]
-  }
+
+  bulleted(bullets)
 }
 
 // Projects
-#let project(title, date, info) = {
+#let project(title: none, date: none, bullets: none) = {
   text(11pt, fill: subheadings-colour, weight: "semibold")[#title ]
   if date != [] or date != none {
     h(1fr)
-    text(11pt, fill: headings-colour, weight: "medium")[#date \ ]
+    text(11pt, style: "italic", fill: headings-colour, weight: "medium")[#date \ ]
   } else {
     [\ ]
   }
-  if info != [] or info != none {
-    text(11pt, fill: primary-colour, weight: "light")[#info ]
-  }
+
+  bulleted(bullets)
 }
 
 // Description of a job, degree, etc
@@ -65,16 +72,17 @@
 }
 
 // Job title
-#let job(position: none, institution: none, location: none, date: none, description: none) = {
-  text(11pt, fill: subheadings-colour, weight: "semibold")[#position]
-  h(1fr)
-  text(11pt, style: "italic", fill: headings-colour, weight: "regular")[#location \ ]
-  text(11pt, style: "italic", fill: subheadings-colour, weight: "medium")[#institution]
-  h(1fr)
-  text(11pt, style: "italic", fill: headings-colour, weight: "regular")[#date]
-  if description != [] or description != none {
-    text(11pt, fill: primary-colour, weight: "regular")[#description]
+#let job(position: none, company: none, location: none, date: none, bullets: none) = {
+  let position_company = if (position != none) and (company != none) {
+    [#position | #company]
+  } else {
+    [#position #company]
   }
+  text(11pt, fill: subheadings-colour, weight: "semibold")[#position_company]
+  // text(11pt, style: "italic", fill: subheadings-colour, weight: "medium")[#institution]
+  h(1fr)
+  text(11pt, style: "italic", fill: headings-colour, weight: "regular")[#date \ ]
+  bulleted(bullets)
 }
 
 // Details
@@ -84,7 +92,12 @@
 
 #let oneline-title-item(title: none, content: none) = {
   text(11pt, fill: subheadings-colour, weight: "bold")[#title: ]
-  text(11pt, fill: primary-colour, weight: "light")[#content \ ]
+  if type(content) == array {
+    let joined_content = array.join(content, " " + sym.square.filled.tiny + " ")
+    text(11pt, fill: primary-colour, weight: "medium")[#joined_content \ ]
+  } else {
+    text(11pt, fill: primary-colour, weight: "medium")[#content \ ]
+  }
 }
 
 #let oneline-two(entry1: none, entry2: none) = {
@@ -220,47 +233,17 @@
   }
 }
 
-#let cv-single(
+#let resume(
   font-type: "Times New Roman",
   continue-header: "false",
   margin: none,
   name: none,
   address: none,
-  lastupdated: "true",
-  pagecount: "true",
-  date: none,
   contacts: (),
   mainbody,
 ) = {
   set text(font: font-type, weight: "regular")
   set cite(form: "full")
-
-  if date == none {
-    let date = [#datetime.today().display()]
-  }
-
-  // last update
-  let lastupdate(lastupdated, date) = {
-    if lastupdated == "true" {
-      set text(8pt, style: "italic", fill: primary-colour, weight: "light")
-      [Last updated: #date]
-    }
-  }
-
-  set page(footer: [
-    #lastupdate(lastupdated, date)
-    #h(1fr)
-    #text(9pt, style: "italic", fill: primary-colour, weight: "light")[#name]
-    #h(1fr)
-    #if pagecount == "true" {
-      text(
-        9pt,
-        style: "italic",
-        fill: primary-colour,
-        weight: "light",
-      )[Page #context counter(page).display("1 / 1", both: true)]
-    }
-  ])
 
   let resolved-margin = if margin != none {
     margin
@@ -328,125 +311,4 @@
     mainbody
   }
   //Main Body
-}
-
-#let cv-double(
-  font-type: "Times New Roman",
-  continue-header: "false",
-  margin: none,
-  name: none,
-  address: none,
-  lastupdated: "true",
-  pagecount: "true",
-  date: none,
-  contacts: (),
-  left: none,
-  right: none,
-) = {
-  set text(font: font-type, weight: "regular")
-  set cite(form: "full")
-
-  if date == none {
-    let date = [#datetime.today().display()]
-  }
-
-  // last update
-  let lastupdate(lastupdated, date) = {
-    if lastupdated == "true" {
-      set text(8pt, style: "italic", fill: primary-colour, weight: "light")
-      [Last updated: #date]
-    }
-  }
-
-  set page(footer: [
-    #lastupdate(lastupdated, date)
-    #h(1fr)
-    #text(9pt, style: "italic", fill: primary-colour, weight: "light")[#name]
-    #h(1fr)
-    #if pagecount == "true" {
-      text(
-        9pt,
-        style: "italic",
-        fill: primary-colour,
-        weight: "light",
-      )[Page #context counter(page).display("1 / 1", both: true)]
-    }
-  ])
-
-  let resolved-margin = if margin != none {
-    margin
-  } else if continue-header == "true" {
-    (left: 1.25cm, right: 1.25cm, top: 2.5cm, bottom: 1.5cm)
-  } else {
-    (left: 1.25cm, right: 1.25cm, top: 1cm, bottom: 1.5cm)
-  }
-
-  if continue-header == "true" {
-    set page(
-      margin: resolved-margin,
-      header: {
-        text(
-          20pt,
-          fill: primary-colour,
-          weight: "bold",
-          top-edge: "baseline",
-          bottom-edge: "baseline",
-          baseline: 11pt,
-        )[#align(center, [#name])]
-        // address
-        if address != none {
-          v(3pt)
-          text(
-            11pt,
-            fill: primary-colour,
-            weight: "regular",
-            top-edge: "baseline",
-            bottom-edge: "baseline",
-            baseline: 2pt,
-          )[#align(center, [#address])]
-        }
-        v(2pt)
-        align(center)[#contact-display(contacts)]
-        v(2pt)
-      },
-      header-ascent: 1em,
-    )
-    //Main Body
-    grid(
-      columns: (1fr, 2fr),
-      column-gutter: 2em,
-      left, right,
-    )
-  } else {
-    set page(margin: resolved-margin)
-    text(
-      20pt,
-      fill: primary-colour,
-      weight: "bold",
-      top-edge: "baseline",
-      bottom-edge: "baseline",
-      baseline: 11pt,
-    )[#align(center, [#name])]
-    // address
-    if address != none {
-      v(3pt)
-      text(
-        11pt,
-        fill: primary-colour,
-        weight: "regular",
-        top-edge: "baseline",
-        bottom-edge: "baseline",
-        baseline: 2pt,
-      )[#align(center, [#address])]
-    }
-    v(2pt)
-    align(center)[#contact-display(contacts)]
-    v(2pt)
-    //Main Body
-    grid(
-      columns: (1fr, 2fr),
-      column-gutter: 2em,
-      left, right,
-    )
-  }
 }
