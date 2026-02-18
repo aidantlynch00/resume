@@ -35,8 +35,12 @@
   ],
   section-block("skills", title: "Skills")[
     #oneline-title-item(
-title: "Programming Languages",
-      content: ("Python", "C++", "Java", "JavaScript", "HTML", "CSS", "SQL", "LaTeX"),
+      title: "Programming",
+      content: ("Rust", "C", "C++", "C#", "Bash", "Python", "Lua", "Java", "JavaScript", "HTML", "CSS", "SQL"),
+    )
+    #oneline-title-item(
+      title: "Tools",
+      content: ("Git", "SVN", "Linux", "OpenEmbedded", "BuildRoot", "Neovim", "Azure", "AWS"),
     )
   ],
   section-block("experience", title: "Experience")[
