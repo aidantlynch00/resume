@@ -83,6 +83,7 @@
   h(1fr)
   text(11pt, style: "italic", fill: headings-colour, weight: "regular")[#date \ ]
   bulleted(bullets)
+  v(-11pt)
 }
 
 // Details
@@ -235,10 +236,10 @@
 
 #let resume(
   font-type: "Times New Roman",
-  continue-header: "false",
   margin: none,
   name: none,
   contacts: (),
+  objective: none,
   mainbody,
 ) = {
   set text(font: font-type, weight: "regular")
@@ -246,44 +247,23 @@
 
   let resolved-margin = if margin != none {
     margin
-  } else if continue-header == "true" {
-    (left: 1.25cm, right: 1.25cm, top: 2.5cm, bottom: 1.5cm)
   } else {
     (left: 1.25cm, right: 1.25cm, top: 1cm, bottom: 1cm)
   }
 
-  if continue-header == "true" {
-    set page(
-      margin: resolved-margin,
-      header: {
-        text(
-          20pt,
-          fill: primary-colour,
-          weight: "bold",
-          top-edge: "baseline",
-          bottom-edge: "baseline",
-          baseline: 11pt,
-        )[#align(center, [#name])]
-        v(2pt)
-        align(center)[#contact-display(contacts)]
-      },
-      header-ascent: 1em,
-    )
-    mainbody
-  } else {
-    set page(margin: resolved-margin)
-    text(
-      20pt,
-      fill: primary-colour,
-      weight: "bold",
-      top-edge: "baseline",
-      bottom-edge: "baseline",
-      baseline: 11pt,
-    )[#align(center, [#upper(name)])]
-    v(1pt)
-    align(center)[#contact-display(contacts)]
-    // line(length: 100%, stroke: 0.5pt + primary-colour)
-    mainbody
-  }
-  //Main Body
+  set page(margin: resolved-margin)
+
+  text(
+    20pt,
+    fill: primary-colour,
+    weight: "bold",
+    top-edge: "baseline",
+    bottom-edge: "baseline",
+    baseline: 11pt,
+  )[#align(center, [#upper(name)])]
+  align(center)[#contact-display(contacts)]
+  v(-1pt)
+  align(center)[#objective]
+  // line(length: 100%, stroke: 0.5pt + primary-colour)
+  mainbody
 }
