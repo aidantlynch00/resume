@@ -43,7 +43,7 @@ if [ -n "$selected" ]; then
     mkdir -p "$PROJECTS_DIR"
 
     # Copy template to output directory
-    cp "$SCRIPT_DIR/resume-template.typ" "$OUTPUT_DIR"
+    cp "$SCRIPT_DIR/resume-helper.typ" "$OUTPUT_DIR"
 
     # Copy project file to output and create include statement
     for selection in $selected; do

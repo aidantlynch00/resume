@@ -1,4 +1,4 @@
-#import "../resume-template.typ": project, oneline-title-item
+#import "../resume-helper.typ": project, oneline-title-item
 
 #project(
   title: "Personal Website",
