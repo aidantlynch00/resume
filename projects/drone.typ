@@ -10,5 +10,6 @@
     oneline-title-item(
       title: "Utilized",
       content: ("C++", "PID", "GPIO", [I$^2$C], "Raspberry Pi"),
+    ),
   ),
 )

@@ -64,6 +64,7 @@
   }
 
   bulleted(bullets)
+  v(-11pt)
 }
 
 // Description of a job, degree, etc

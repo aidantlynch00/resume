@@ -79,7 +79,7 @@
       company: "C Speed",
       date: "Jan 2021 " + sym.dash.en + " Aug 2021",
       bullets: (
-        "Improved a radar data parser's performance by 25\% through the identification of inefficient operations.",
+        "Improved a radar data parser's performance by 25% through the identification of inefficient operations.",
         "Implemented an interactive website for the visualization of live and historical radar data.",
         "Redesigned the radar data aggregation pipeline to run on a cloud machine for worldwide access.",
         "Implemented a distributed algorithm for determining the temporal ranges of data points to improve search and playback.",
@@ -91,15 +91,7 @@
     )
   ],
   section-block("projects", title: "Projects")[
-    #project(
-      title: "Project 1",
-      date: "Jan 2023",
-      bullets: (
-        lorem(10),
-        lorem(10),
-        lorem(10),
-      ),
-    )
+    {{PROJECTS}}
   ],
 )
 

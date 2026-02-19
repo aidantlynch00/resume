@@ -7,5 +7,6 @@
     oneline-title-item(
       title: "Utilized",
       content: (),
+    ),
   ),
 )

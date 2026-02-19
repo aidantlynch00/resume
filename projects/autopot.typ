@@ -2,7 +2,7 @@
 
 #project(
   title: "AutoPot",
-  date: "June 2023 " + sym.dash.en + " Present",
+  date: "Jun 2023 " + sym.dash.en + " Present",
   bullets: (
     "Designed a distributed system that separated sensor and control processes to improve flexibility and fault handling.",
     "Leveraged Unix domain sockets to handle inter-process communication to coordinate system behavior.",
@@ -10,5 +10,6 @@
     oneline-title-item(
       title: "Utilized",
       content: ("Rust", "SPI", "SQLite", "Cross compilation"),
+    ),
   ),
 )

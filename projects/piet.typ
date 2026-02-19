@@ -9,5 +9,6 @@
     oneline-title-item(
       title: "Utilized",
       content: ("Rust", "Git"),
+    ),
   ),
 )
