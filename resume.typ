@@ -1,4 +1,4 @@
-#import "resume-template.typ": *
+#import "resume-helper.typ": *
 #import "@preview/fontawesome:0.6.0": *
 
 #let name = "Aidan Lynch"
