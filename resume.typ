@@ -53,10 +53,7 @@
         "Translated project requirements into high-quality, maintainable software across several domains.",
         "Improved and maintained build systems to create bootloader, kernel, and root file system images for various embedded devices.",
         "Leveraged knowledge in PowerShell and WSL to mount LUKS encrypted partitions on a Windows machine.",
-        oneline-title-item(
-          title: "Utilized",
-          content: ("C++", "C#", "Bash", "PowerShell", "Lua", "Python", "OpenEmbedded", "OpenWRT", "Azure", "Git", "SVN"),
-        ),
+        utilized(("C++", "C#", "Bash", "PowerShell", "Lua", "Python", "OpenEmbedded", "OpenWRT", "Azure", "Git", "SVN")),
       ),
     )
     #job(
@@ -68,10 +65,7 @@
         "Built a dynamic rendering system for the form structure by using a set of recursive functions.",
         "Implemented a drag-and-drop interface to create and arrange custom form elements.",
         "Incorporated regulatory form requirements by augmenting the nested structure with validation criteria.",
-        oneline-title-item(
-          title: "Utilized",
-          content: ("TypeScript", "React", "Material UI"),
-        ),
+        utilized(("TypeScript", "React", "Material UI")),
       ),
     )
     #job(
@@ -83,10 +77,7 @@
         "Implemented an interactive website for the visualization of live and historical radar data.",
         "Redesigned the radar data aggregation pipeline to run on a cloud machine for worldwide access.",
         "Implemented a distributed algorithm for determining the temporal ranges of data points to improve search and playback.",
-        oneline-title-item(
-          title: "Utilized",
-          content: ("C++", "C#", "JavaScript", "AWS"),
-        ),
+        utilized(("C++", "C#", "JavaScript", "AWS")),
       ),
     )
   ],

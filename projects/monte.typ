@@ -1,4 +1,4 @@
-#import "../resume-helper.typ": project, oneline-title-item
+#import "../resume-helper.typ": project, utilized
 
 #project(
   title: "Monte Retires",
@@ -6,9 +6,6 @@
   bullets: (
     "Implemented a Monte Carlo simulation using historical market data and custom investment strategies to calculate retirement valuations over time.",
     "Integrated graphing functionality in order to visually compare the effectiveness of different strategies.",
-    oneline-title-item(
-      title: "Utilized",
-      content: ("Python", "Matplotlib", "Monte Carlo")
-    ),
+    utilized(("Python", "Matplotlib", "Monte Carlo")),
   ),
 )

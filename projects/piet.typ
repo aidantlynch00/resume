@@ -1,4 +1,4 @@
-#import "../resume-helper.typ": project, oneline-title-item
+#import "../resume-helper.typ": project, utilized
 
 #project(
   title: "Piet Interpreter",
@@ -6,9 +6,6 @@
   bullets: (
     "Developed a parser to convert image files into Piet programs, translating pixels into executable instructions.",
     "Implemented an interpreter to handle control flow and execution as well as manipulate program data.",
-    oneline-title-item(
-      title: "Utilized",
-      content: ("Rust", "Git"),
-    ),
+    utilized(("Rust", "Git")),
   ),
 )

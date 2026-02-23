@@ -102,6 +102,13 @@
   }
 }
 
+#let utilized(content) = {
+  oneline-title-item(
+    title: "Utilized",
+    content: content,
+  )
+}
+
 #let oneline-two(entry1: none, entry2: none) = {
   let left-content = if entry1 != none { entry1 } else { [] }
   let right-content = if entry2 != none { [#entry2 \ ] } else { [] }

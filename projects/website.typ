@@ -1,4 +1,4 @@
-#import "../resume-helper.typ": project, oneline-title-item
+#import "../resume-helper.typ": project, utilized
 
 #project(
   title: "Personal Website",
@@ -6,9 +6,6 @@
   bullets: (
     "Developed a website to showcase my personal projects and various networking resources.",
     "Leveraged React to create reusable components for navigation and project cards.",
-    oneline-title-item(
-      title: "Utilized",
-      content: ("React"),
-    ),
+    utilized(("React")),
   ),
 )
