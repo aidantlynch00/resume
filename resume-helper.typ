@@ -67,29 +67,18 @@
   v(-11pt)
 }
 
-// Description of a job, degree, etc
-#let descript(content) = {
-  text(11pt, fill: subheadings-colour, weight: "regular")[#content ]
-}
-
 // Job title
-#let job(position: none, company: none, location: none, date: none, bullets: none) = {
+#let job(position: none, company: none, date: none, bullets: none) = {
   let position_company = if (position != none) and (company != none) {
     [#position | #company]
   } else {
     [#position #company]
   }
   text(11pt, fill: subheadings-colour, weight: "semibold")[#position_company]
-  // text(11pt, style: "italic", fill: subheadings-colour, weight: "medium")[#institution]
   h(1fr)
   text(11pt, style: "italic", fill: headings-colour, weight: "regular")[#date \ ]
   bulleted(bullets)
   v(-11pt)
-}
-
-// Details
-#let info(content) = {
-  text(11pt, fill: primary-colour, weight: "light")[#content\ ]
 }
 
 #let oneline-title-item(title: none, content: none) = {
