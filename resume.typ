@@ -36,7 +36,7 @@
   section-block("skills", title: "Skills")[
     #oneline-title-item(
       title: "Programming",
-      content: ("Rust", "C", "C++", "C#", "Bash", "Python", "Lua", "Java", "JavaScript", "HTML", "CSS", "SQL"),
+      content: ("Rust", "C", "C++", "C#", "Shell", "Python", "Lua", "Java", "TypeScript"),
     )
     #oneline-title-item(
       title: "Tools",
