@@ -81,11 +81,15 @@
   v(-11pt)
 }
 
+#let oneline-bulleted(content) = {
+    let joined_content = array.join(content, " " + sym.square.filled.tiny + " ")
+    text(11pt, fill: primary-colour, weight: "medium")[#joined_content \ ]
+}
+
 #let oneline-title-item(title: none, content: none) = {
   text(11pt, fill: subheadings-colour, weight: "bold")[#title: ]
   if type(content) == array {
-    let joined_content = array.join(content, " " + sym.square.filled.tiny + " ")
-    text(11pt, fill: primary-colour, weight: "medium")[#joined_content \ ]
+    oneline-bulleted(content)
   } else {
     text(11pt, fill: primary-colour, weight: "medium")[#content \ ]
   }
