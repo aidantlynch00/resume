@@ -36,7 +36,7 @@
   section-block("skills", title: "Skills")[
     #oneline-title-item(
       title: "Programming",
-      content: ("Rust", "C", "C++", "C#", "Shell", "Python", "Lua", "Java", "TypeScript"),
+      content: ("Rust", "C", "C++", "C#", "Shell", "Python", "Lua", "TypeScript", "Java"),
     )
     #oneline-title-item(
       title: "Tools",
@@ -49,10 +49,10 @@
       company: "C Speed",
       date: "Feb 2023 " + sym.dash.en + " Present",
       bullets: (
-        "Led multiple software development efforts while delegating work to interns and managing their deliverables.",
+        "Led software efforts for 2 enterprise clients, serving as the primary point of contact and managing deliverables and expectations throughout the project lifecycle.",
+        "Partnered with manufacturing and procurement teams to design and deploy internal tooling to eliminate manual processes.",
         "Translated project requirements into high-quality, maintainable software across several domains.",
-        "Improved and maintained build systems to create bootloader, kernel, and root file system images for various embedded devices.",
-        "Leveraged knowledge in PowerShell and WSL to mount LUKS encrypted partitions on a Windows machine.",
+        "Maintained and improved build systems to create bootloader, kernel, and root file system images for various embedded devices.",
         utilized(("C++", "C#", "Bash", "PowerShell", "Lua", "Python", "OpenEmbedded", "OpenWRT", "Azure", "Git", "SVN")),
       ),
     )
@@ -61,10 +61,10 @@
       company: "Bryx",
       date: "May 2022 " + sym.dash.en + " Aug 2022",
       bullets: (
-        "Improved form extensibility through the use of a nested data structure for storing user-created forms.",
-        "Built a dynamic rendering system for the form structure by using a set of recursive functions.",
-        "Implemented a drag-and-drop interface to create and arrange custom form elements.",
-        "Incorporated regulatory form requirements by augmenting the nested structure with validation criteria.",
+        "Improved user form extensibility through the use of a self-referential data structure for storing hierarchical form elements.",
+        "Built a dynamic rendering system for the form structure using a set of recursive functions.",
+        "Implemented a drag-and-drop interface to create and arrange custom form element hierarchies.",
+        "Incorporated regulatory form requirements by augmenting the data structure with validation criteria.",
         utilized(("TypeScript", "React", "Material UI")),
       ),
     )
@@ -73,10 +73,10 @@
       company: "C Speed",
       date: "Jan 2021 " + sym.dash.en + " Aug 2021",
       bullets: (
-        "Improved a radar data parser's performance by 25% through the identification of inefficient operations.",
+        "Improved ASTERIX data parser performance by 25% through the identification of inefficient operations.",
         "Implemented an interactive website for the visualization of live and historical radar data.",
-        "Redesigned the radar data aggregation pipeline to run on a cloud machine for worldwide access.",
-        "Implemented a distributed algorithm for determining the temporal ranges of data points to improve search and playback.",
+        "Redesigned radar data aggregation and storage to run in the cloud for worldwide availability.",
+        "Implemented a distributed algorithm for determining the temporal ranges of data to improve search and playback.",
         utilized(("C++", "C#", "JavaScript", "AWS")),
       ),
     )
