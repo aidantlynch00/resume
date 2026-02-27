@@ -13,10 +13,12 @@
     (text: [#fa-icon("github") aidantlynch00], link: "https://github.com/aidantlynch00"),
     (text: [#fa-icon("earth-americas") aidantlynch.com], link: "https://aidantlynch.com"),
   ),
-  objective: emph([*Seeking a software engineering position for the spring of 2026.*]),
 )
 
 #let sections = (
+  section-block("summary", title: "Summary")[
+    Customer-focused Software Engineer with 4+ years of experience driving client success. Eager to work alongside talented, motivated engineers in a challenging role with growth opportunities.
+  ],
   section-block("education", title: "Education")[
     #education(
       institution: "Rochester Institute of Technology",
@@ -49,10 +51,10 @@
       company: "C Speed",
       date: "Feb 2023 " + sym.dash.en + " Present",
       bullets: (
-        "Led software efforts for 2 enterprise clients, serving as the primary point of contact and managing deliverables and expectations throughout the project lifecycle.",
-        "Partnered with manufacturing and procurement teams to design and deploy internal tooling to eliminate manual processes.",
-        "Translated project requirements into high-quality, maintainable software across several domains.",
-        "Maintained and improved build systems to create bootloader, kernel, and root file system images for various embedded devices.",
+        "Led software efforts for 2 enterprise clients, serving as the primary point of contact for managing deliverables and expectations throughout the project lifecycle.",
+        "Partnered with manufacturing and procurement teams to deploy internal tooling that eliminated manual processes.",
+        "Mentored several groups of interns through code reviews and deep dives into programming concepts.",
+        "Maintained software for critical medical applications with a focus on availability and product security.",
         utilized(("C++", "C#", "Bash", "PowerShell", "Lua", "Python", "OpenEmbedded", "OpenWRT", "Azure", "Git", "SVN")),
       ),
     )
@@ -61,9 +63,9 @@
       company: "Bryx",
       date: "May 2022 " + sym.dash.en + " Aug 2022",
       bullets: (
-        "Improved user form extensibility through the use of a self-referential data structure for storing hierarchical form elements.",
-        "Built a dynamic rendering system for the form structure using a set of recursive functions.",
-        "Implemented a drag-and-drop interface to create and arrange custom form element hierarchies.",
+        "Improved user form templating through the use of a tree structure to organize nested form elements.",
+        "Built a dynamic rendering system to display form elements using a set of recursive functions.",
+        "Implemented a drag-and-drop interface to create and arrange form element hierarchies.",
         "Incorporated regulatory form requirements by augmenting the data structure with validation criteria.",
         utilized(("TypeScript", "React", "Material UI")),
       ),
@@ -74,7 +76,7 @@
       date: "Jan 2021 " + sym.dash.en + " Aug 2021",
       bullets: (
         "Improved ASTERIX data parser performance by 25% through the identification of inefficient operations.",
-        "Implemented an interactive website for the visualization of live and historical radar data.",
+        "Developed an interactive website for the visualization of live and historical radar data.",
         "Redesigned radar data aggregation and storage to run in the cloud for worldwide availability.",
         "Implemented a distributed algorithm for determining the temporal ranges of data to improve search and playback.",
         utilized(("C++", "C#", "JavaScript", "AWS")),
@@ -87,7 +89,7 @@
 )
 
 #let section-order = (
-  "about",
+  "summary",
   "experience",
   "projects",
   "education",

@@ -64,7 +64,7 @@
   }
 
   bulleted(bullets)
-  v(-11pt)
+  v(-16pt)
 }
 
 // Job title
@@ -78,7 +78,7 @@
   h(1fr)
   text(11pt, style: "italic", fill: headings-colour, weight: "regular")[#date \ ]
   bulleted(bullets)
-  v(-11pt)
+  v(-16pt)
 }
 
 #let oneline-bulleted(content) = {
