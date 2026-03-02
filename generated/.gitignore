@@ -1,5 +1,0 @@
-# Ignore all generated files in this folder
-*
-
-# Ensure git tracks this file
-!.gitignore
