@@ -2,7 +2,7 @@
 
 #project(
   title: "AutoPot",
-  date: "Jun 2023 " + sym.dash.en + " December 2025",
+  date: "Jun 2023 " + sym.dash.en + " Dec 2024",
   bullets: (
     "Architected a distributed system to care for plants inspired by continuous monitoring medical devices.",
     "Engineered an inter-process communication framework based on Unix domain sockets to coordinate behavior between system components.",
