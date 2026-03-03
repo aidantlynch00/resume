@@ -55,7 +55,7 @@
         "Partnered with manufacturing and procurement teams to deploy internal tooling that eliminated manual processes.",
         "Mentored several groups of interns through code reviews and deep dives into programming concepts.",
         "Maintained software for critical medical applications with a focus on availability and product security.",
-        utilized(("C++", "C#", "Bash", "PowerShell", "Lua", "Python", "OpenEmbedded", "OpenWRT", "Azure", "Git", "SVN")),
+        utilized(("C++", "C#", "Bash", "PowerShell", "Lua", "Python", "Yocto", "Buildroot", "Azure", "Git", "SVN")),
       ),
     )
     #job(
