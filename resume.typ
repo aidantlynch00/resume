@@ -42,7 +42,7 @@
     )
     #oneline-title-item(
       title: "Tools",
-      content: ("Git", "SVN", "Linux", "OpenEmbedded", "BuildRoot", "Neovim", "Azure", "AWS"),
+      content: ("Git", "SVN", "Linux", "OpenEmbedded", "BuildRoot", "Neovim", "OpenCode", "Azure", "AWS"),
     )
   ],
   section-block("experience", title: "Experience")[
